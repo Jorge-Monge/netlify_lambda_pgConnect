@@ -59,7 +59,8 @@ function getMarkers() {
     cleanDomChildren(markersList);
 
     httpPerformRequest(urlBack,
-                        JSON.stringify({dbQuery: selectAllQuery}))
+        'POST',
+         JSON.stringify({dbQuery: selectAllQuery}))
     .then(data => {
         var rows = data.rows;
         rows.forEach(marker => {
