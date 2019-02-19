@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interacting with a Database</title>
+    <!--Using the w3 css framework (https://www.w3schools.com/w3css/default.asp)-->
+    <link rel="stylesheet" href="css/w3.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <!--Line below specifies an empty shortcut icon-->
+    <link rel="shortcut icon" href="">
+    
+</head>
+<body>
+    <h2>Insert Marker</h2>
+        <div>
+                <label for="markerName" class="">Name of the marker: </label>
+            <input type="text" id="markerName" placeholder="Marker Name" class="w3-input w3-section w3-round-large" required>
+        </div>
+        <div>
+                <label for="markerText" class="">Text of the marker: </label>
+            <textarea type="text" id="markerText" placeholder="Marker Text" class="w3-input w3-section w3-round-large"></textarea>
+        </div>
+        <button id="addMarker" class="w3-btn w3-round-xxlarge w3-indigo w3-hover-orange w3-xlarge w3-ripple w3-margin">Insert it!</button>
+    <hr>
+    <h2>Delete all markers but the first two</h2>
+    <button id="deleteMarkers" class="w3-btn w3-round-xxlarge w3-indigo w3-hover-orange w3-xlarge w3-ripple w3-margin">Delete them!</button>
+    <hr>
+    <h2>Select All Current Markers</h2>
+    <button id="getMarkers" class="w3-btn w3-round-xxlarge w3-indigo w3-hover-orange w3-xlarge w3-ripple w3-margin">Get them!</button>
+
+    <div id="ouput">
+        <ul id="markersList"></ul>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
+
