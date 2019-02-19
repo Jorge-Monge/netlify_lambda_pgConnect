@@ -63,6 +63,7 @@ function getMarkers() {
          JSON.stringify({dbQuery: selectAllQuery}))
     .then(data => {
         var rows = data.rows;
+        console.table(rows);
         rows.forEach(marker => {
             var node = document.createElement("li");
             var p1 = document.createElement("p");
@@ -97,8 +98,7 @@ function addMarker(e) {
         'POST',
         JSON.stringify({dbQuery: insertQuery}))
         .then((res) => {
-            console.log("*** Response ***");
-            console.log(res);})
+            console.log("Number of records added: " + res.rowCount);})
 }
 
 
